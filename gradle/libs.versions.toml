@@ -10,6 +10,8 @@ activityCompose = "1.7.0"
 composeBom = "2023.08.00"
 appcompat = "1.6.1"
 material = "1.10.0"
+mockk = "1.13.11"
+truth = "1.4.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,7 +29,15 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }
+kotlin-stlid = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+
+[bundles]
+reflection = ["kotlin-reflect", "kotlin-stlid"]
+unitTests = ["junit", "mockk", "truth"]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
