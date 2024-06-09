@@ -1,0 +1,231 @@
+<resources>
+    <array name="mocha_name">
+        <item>Smith</item>
+        <item>Johnson</item>
+        <item>Williams</item>
+        <item>Jones</item>
+        <item>Brown</item>
+        <item>Davis</item>
+        <item>Miller</item>
+        <item>Wilson</item>
+        <item>Moore</item>
+        <item>Taylor</item>
+        <item>Anderson</item>
+        <item>Thomas</item>
+        <item>Jackson</item>
+        <item>White</item>
+        <item>Harris</item>
+        <item>Martin</item>
+        <item>Thompson</item>
+        <item>Garcia</item>
+        <item>Martinez</item>
+        <item>Lee</item>
+    </array>
+    <array name="mocha_id">
+        <item>1001</item>
+        <item>1002</item>
+        <item>1003</item>
+        <item>1004</item>
+        <item>1005</item>
+        <item>1006</item>
+        <item>1007</item>
+        <item>1008</item>
+        <item>1009</item>
+        <item>1010</item>
+    </array>
+    <array name="mocha_email">
+        <item>johndoe@gmail.com</item>
+        <item>janedoe@yahoo.com</item>
+        <item>johnsmith@hotmail.com</item>
+        <item>janesmith@outlook.com</item>
+        <item>markjohnson@aol.com</item>
+        <item>maryjohnson@icloud.com</item>
+        <item>alicesmith@live.com</item>
+        <item>bobsmith@protonmail.com</item>
+        <item>emilyjones@zoho.com</item>
+        <item>adamjones@inbox.com</item>
+    </array>
+    <array name="mocha_username">
+        <item>johndoe123</item>
+        <item>janedoe456</item>
+        <item>johnsmith789</item>
+        <item>janesmith101</item>
+        <item>markjohnson2020</item>
+        <item>maryjohnson3030</item>
+        <item>alicesmith404</item>
+        <item>bobsmith505</item>
+        <item>emilyjones606</item>
+        <item>adamjones707</item>
+    </array>
+    <array name="mocha_password">
+        <item>password123</item>
+        <item>securepass456</item>
+        <item>test1234</item>
+        <item>pass123456</item>
+        <item>letmein789</item>
+        <item>password2020</item>
+        <item>12345678</item>
+        <item>qwerty123</item>
+        <item>abcdefg123</item>
+        <item>iloveyou456</item>
+    </array>
+    <array name="mocha_gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </array>
+    <array name="mocha_address">
+        <item>123 Main Street</item>
+        <item>456 Elm Avenue</item>
+        <item>789 Oak Lane</item>
+        <item>101 Maple Drive</item>
+        <item>234 Pine Road</item>
+        <item>567 Cedar Boulevard</item>
+        <item>890 Birch Court</item>
+        <item>111 Spruce Lane</item>
+        <item>222 Walnut Street</item>
+        <item>333 Cherry Avenue</item>
+        <item>444 Willow Lane</item>
+        <item>555 Sycamore Drive</item>
+        <item>666 Hickory Road</item>
+        <item>777 Ash Street</item>
+        <item>888 Birch Avenue</item>
+        <item>999 Oak Drive</item>
+        <item>1212 Maple Court</item>
+        <item>1313 Pine Lane</item>
+        <item>1414 Cedar Road</item>
+        <item>1515 Elm Boulevard</item>
+    </array>
+    <array name="mocha_city">
+        <item>New York City</item>
+        <item>Los Angeles</item>
+        <item>London</item>
+        <item>Paris</item>
+        <item>Tokyo</item>
+        <item>Mumbai</item>
+        <item>Sydney</item>
+        <item>Toronto</item>
+        <item>Rome</item>
+        <item>Berlin</item>
+    </array>
+    <array name="mocha_country">
+        <item>United States</item>
+        <item>United Kingdom</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Japan</item>
+        <item>India</item>
+        <item>Australia</item>
+        <item>Canada</item>
+        <item>Italy</item>
+        <item>Spain</item>
+    </array>
+    <array name="mocha_phone">
+        <item>"+123456789012"</item>
+        <item>"+198765432109"</item>
+        <item>"+11234567890"</item>
+        <item>"+10987654321"</item>
+        <item>"+667788990011"</item>
+        <item>"+990011223344"</item>
+        <item>"+112233445566"</item>
+        <item>"+998877665544"</item>
+        <item>"+554433221100"</item>
+        <item>"+771122334455"</item>
+    </array>
+    <array name="mocha_url">
+        <item>https://www.google.com</item>
+        <item>https://www.yahoo.com</item>
+        <item>https://www.bing.com</item>
+        <item>https://www.amazon.com</item>
+        <item>https://www.facebook.com</item>
+        <item>https://www.twitter.com</item>
+        <item>https://www.instagram.com</item>
+        <item>https://www.linkedin.com</item>
+        <item>https://www.netflix.com</item>
+        <item>https://www.reddit.com</item>
+    </array>
+    <array name="mocha_description">
+        <item>Passionate about technology and innovation.</item>
+        <item>Enthusiastic learner with a keen interest in data science.</item>
+        <item>Experienced developer with expertise in web development.</item>
+        <item>Creative thinker with a passion for problem-solving.</item>
+        <item>Driven professional with a focus on continuous improvement.</item>
+        <item>Detail-oriented individual with strong analytical skills.</item>
+        <item>Team player with excellent communication abilities.</item>
+        <item>Adaptable and resourceful individual with a growth mindset.</item>
+        <item>Strategic thinker with a knack for project management.</item>
+        <item>Customer-focused professional dedicated to delivering quality solutions.</item>
+    </array>
+    <array name="mocha_status">
+        <item>Active</item>
+        <item>Inactive</item>
+        <item>Pending</item>
+        <item>Blocked</item>
+        <item>Suspended</item>
+        <item>Verified</item>
+    </array>
+    <array name="mocha_custom">
+        <item>The quick brown fox jumps over the lazy dog.</item>
+        <item>She sells seashells by the seashore.</item>
+        <item>The rain in Spain stays mainly in the plain.</item>
+        <item>How much wood would a woodchuck chuck if a woodchuck could chuck wood?</item>
+        <item>Peter Piper picked a peck of pickled peppers.</item>
+        <item>A journey of a thousand miles begins with a single step.</item>
+        <item>To be or not to be, that is the question.</item>
+        <item>All that glitters is not gold.</item>
+        <item>A picture is worth a thousand words.</item>
+        <item>When in Rome, do as the Romans do.</item>
+        <item>The pen is mightier than the sword.</item>
+        <item>Actions speak louder than words.</item>
+    </array>
+    <array name="mocha_undefined">
+        <item>Cloud computing offers scalable resources over the internet.</item>
+        <item>Artificial intelligence is transforming industries globally.</item>
+        <item>Cybersecurity is crucial for protecting sensitive information.</item>
+        <item>Machine learning algorithms improve over time with data.</item>
+        <item>Blockchain technology ensures secure and transparent transactions.</item>
+        <item>Big data analytics can provide valuable business insights.</item>
+        <item>The Internet of Things connects everyday devices to the internet.</item>
+        <item>Virtual reality creates immersive digital experiences.</item>
+        <item>Software development requires careful planning and testing.</item>
+        <item>Data science combines statistics and computer science.</item>
+        <item>Quantum computing has the potential to solve complex problems.</item>
+        <item>Automation can streamline repetitive tasks in workflows.</item>
+    </array>
+    <array name="mocha_code">
+        <item>ABC123</item>
+        <item>DEF456</item>
+        <item>GHI789</item>
+        <item>JKL012</item>
+        <item>MNO345</item>
+        <item>PQR678</item>
+        <item>STU901</item>
+        <item>VWX234</item>
+        <item>YZA567</item>
+        <item>BCD890</item>
+    </array>
+    <array name="mocha_tag">
+        <item>Development</item>
+        <item>Testing</item>
+        <item>Production</item>
+        <item>Bug</item>
+        <item>Feature</item>
+        <item>Hotfix</item>
+        <item>Refactor</item>
+        <item>Documentation</item>
+        <item>Deployment</item>
+        <item>Review</item>
+    </array>
+    <array name="mocha_label">
+        <item>Priority</item>
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+        <item>Critical</item>
+        <item>Major</item>
+        <item>Minor</item>
+        <item>Trivial</item>
+        <item>Enhancement</item>
+        <item>Task</item>
+    </array>
+</resources>
