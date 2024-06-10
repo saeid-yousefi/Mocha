@@ -1,24 +1,45 @@
 package ir.sy.mocha
 
+import android.content.Context
 import io.kotest.core.spec.style.BehaviorSpec
-import io.kotest.matchers.ints.shouldBeLessThan
+import io.kotest.matchers.shouldBe
+import io.mockk.mockk
+import ir.sy.mocha.mocker.annotations.MockInt
+import ir.sy.mocha.mocker.types.IntType
 
 class MochaAnnotationFinderTest : BehaviorSpec({
-    beforeTest {
 
-    }
-    Given("a list of annotations") {
-        `when`("finding mocha") {
-            Then("found") {
-                println("hello")
-                1 shouldBeLessThan 10
+    val context = mockk<Context>()
+    val mocha = Mocha(context)
+
+    Given("a list of annotations including MochaAnnotation") {
+        val item = MockInt(type = IntType.Price)
+        val annotations = listOf(item)
+        `when`("finding Mocha annotations") {
+            val result = mocha.findMochaAnnotations(annotations)
+            Then("it should return the Mocha annotation") {
+                result shouldBe item
             }
         }
+    }
 
-        `when`("finding mocha") {
-            Then("found") {
-                println("hello")
-                5 shouldBeLessThan 10
+    Given("a list of annotations without MochaAnnotation") {
+        val item = mockk<Annotation>()
+        val annotations = listOf(item)
+        `when`("finding Mocha annotations") {
+            val result = mocha.findMochaAnnotations(annotations)
+            then("it should return null") {
+                result shouldBe null
+            }
+        }
+    }
+
+    Given("an empty list of annotations") {
+        val annotations = emptyList<Annotation>()
+        `when`("finding Mocha annotations") {
+            val result = mocha.findMochaAnnotations(annotations)
+            then("it should return null") {
+                result shouldBe null
             }
         }
     }
