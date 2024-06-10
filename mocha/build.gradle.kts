@@ -31,14 +31,18 @@ android {
         jvmTarget = "1.8"
     }
 }
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+}
 
 dependencies {
-    implementation ("org.jetbrains.kotlin:kotlin-reflect:1.9.10")
-    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.20")
+    implementation(libs.bundles.reflection)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    testImplementation(libs.junit)
+    testImplementation(libs.bundles.unitTests)
+    testRuntimeOnly(libs.junit.engine)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
