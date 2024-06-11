@@ -14,7 +14,13 @@ class GetLongTypesTest : BehaviorSpec({
                 result shouldBe LongType.Timestamp
             }
         }
-
+        `when`("variable is valid") {
+            val variableName = "fileSize"
+            Then("result should be in size type") {
+                val result = getLongType(variableName)
+                result shouldBe LongType.Size
+            }
+        }
         `when`("variable name is not valid") {
             val variableName = "aa_bb_cc"
             Then("result should be in undefined type") {
