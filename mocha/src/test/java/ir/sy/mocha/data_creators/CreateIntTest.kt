@@ -39,7 +39,7 @@ class CreateIntTest : BehaviorSpec({
             val min = 1
             val max = 20
             val factor = 5
-            val mockInt = MockInt(type = IntType.Custom, min, max, factor)
+            val mockInt = MockInt(type = IntType.Custom, min,max,factor)
             val result = createInt(variableName, mockInt)
             then("result should be in id range") {
                 result shouldBeInRange min * factor..max * factor
