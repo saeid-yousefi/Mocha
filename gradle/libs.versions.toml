@@ -13,6 +13,8 @@ material = "1.10.0"
 mockk = "1.13.11"
 truth = "1.4.2"
 kotest = "5.8.1"
+kover = "0.6.1"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,6 +48,7 @@ unitTests = ["junit", "mockk", "truth", "kotest-junit-runner", "kotest-assertion
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 
