@@ -4,12 +4,13 @@ import android.content.Context
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.mockk
+import io.mockk.spyk
 import ir.sy.mocha.mocker.annotations.MockInt
 import ir.sy.mocha.mocker.types.IntType
 
 class MochaAnnotationFinderTest : BehaviorSpec({
 
-    val context = mockk<Context>()
+    val context = spyk<Context>()
     val mocha = Mocha(context)
 
     Given("a list of annotations including MochaAnnotation") {
