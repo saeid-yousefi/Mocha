@@ -112,18 +112,7 @@ fun createString(variableName: String, context: Context, annotation: MockString?
     val defaultValue = annotation?.defaultValue
     if (!defaultValue.isNullOrBlank()) return defaultValue
 
-    val resourceId =
-        context.resources.getIdentifier(
-            "mocha_${type.name.lowercase()}",
-            "array",
-            context.packageName
-        )
-
-    if (resourceId == 0) {
-        throw Resources.NotFoundException("Resource not found for type: ${type.name.lowercase()}")
-    }
-
-    val stringArray = context.resources.getStringArray(resourceId)
+    val stringArray = getStringArrayFromResources(context, "mocha_${type.name.lowercase()}")
     if (stringArray.isEmpty()) {
         throw IllegalArgumentException("String array for type: ${type.name.lowercase()} is empty")
     }
@@ -140,6 +129,13 @@ fun createString(variableName: String, context: Context, annotation: MockString?
 
 fun createBoolean(): Boolean {
     return Random.nextBoolean()
+}
+
+internal fun getStringArrayFromResources(context: Context, arrayName: String): Array<String> {
+    val resourceId =
+        context.resources.getIdentifier(arrayName, "array", context.packageName)
+
+    return context.resources.getStringArray(resourceId)
 }
 
 private fun createIntNumber(range: IntRange, factor: Int): Int {
