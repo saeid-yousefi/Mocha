@@ -3,6 +3,7 @@ package ir.sy.mocha
 import android.content.Context
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.types.shouldBeInstanceOf
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkStatic
@@ -43,15 +44,12 @@ class CreateDataTest : BehaviorSpec({
                 result shouldBe expectedList
             }
         }
-        `when`("create a data class") {
+        `when`("create a child data class") {
             data class Foo(val id: Int)
 
-            val expectedResult = Foo(1)
-            every { mocha.mock<Foo>() } returns expectedResult
-            val result = mocha.createData(type = typeOf<Foo>())
-
-            then("result should be instance of Foo") {
-                result shouldBe expectedResult
+            val result = mocha.createData(type = Foo::class.createType())
+            then("the result should be Foo") {
+                result.shouldBeInstanceOf<Foo>()
             }
         }
     }
