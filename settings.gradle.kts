@@ -1,24 +1,24 @@
 pluginManagement {
     repositories {
-        maven("https://inexus.samentic.com/repository/samentic-android/") {
-            credentials {
-                username = "saeid-yousefi"
-                password = "Saeid1373##"
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
             }
         }
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        maven("https://inexus.samentic.com/repository/samentic-android/") {
-            credentials {
-                username = "saeid-yousefi"
-                password = "Saeid1373##"
-            }
-        }
+        google()
+        mavenCentral()
     }
 }
+
 rootProject.name = "Mocka"
 include(":app")
 include(":mocha")
