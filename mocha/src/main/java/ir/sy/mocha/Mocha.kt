@@ -27,7 +27,20 @@ import kotlin.reflect.KType
 import kotlin.reflect.full.primaryConstructor
 import kotlin.reflect.jvm.jvmErasure
 
+/**
+ * A utility class to generate mock data for testing purposes.
+ *
+ * @param context The context of the application.
+ */
 class Mocha(private val context: Context) {
+
+    /**
+     * Creates a mock instance of the specified class type.
+     *
+     * @param T The type of the class to mock.
+     * @param clazz The KClass of the class to mock. If null, the type is inferred from T.
+     * @return An instance of the mocked class.
+     */
     inline fun <reified T> mock(clazz: KClass<*>? = null): T {
         val actualClass = clazz ?: T::class
         val constructor: KFunction<T> = getConstructor(actualClass)
@@ -43,6 +56,14 @@ class Mocha(private val context: Context) {
         return constructor.call(*args)
     }
 
+    /**
+     * Creates data for the specified type.
+     *
+     * @param type The type of the data to create.
+     * @param variableName The name of the variable.
+     * @param annotation The annotation associated with the variable.
+     * @return An instance of the created data.
+     */
     fun createData(
         type: KType? = null,
         variableName: String? = null,
@@ -79,16 +100,26 @@ class Mocha(private val context: Context) {
         }
     }
 
+    /**
+     * Finds the first Mocha annotation in the list of annotations.
+     *
+     * @param annotations The list of annotations to search.
+     * @return The first Mocha annotation found, or null if none are found.
+     */
     fun findMochaAnnotations(annotations: List<Annotation>): Annotation? {
         return annotations.firstOrNull { annotation ->
             Constants.MOCHA_ANNOTATIONS.any { it.isInstance(annotation) }
         }
     }
 
+    /**
+     * Gets the constructor of the specified class.
+     *
+     * @param T The type of the class.
+     * @param clazz The KClass of the class. If null, the type is inferred from T.
+     * @return The primary constructor of the class.
+     */
     inline fun <reified T> getConstructor(clazz: KClass<*>? = null): KFunction<T> {
         return (clazz?.primaryConstructor ?: T::class.constructors.first()) as KFunction<T>
     }
 }
-
-
-
