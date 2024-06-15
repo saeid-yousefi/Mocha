@@ -18,6 +18,13 @@ import ir.sy.mocha.utils.Constants.MAXIMUM_TIME_IN_MILLI_SECONDS
 import ir.sy.mocha.utils.Constants.MINIMUM_TIME_IN_MILLI_SECONDS
 import kotlin.random.Random
 
+/**
+ * Generates a mock integer value based on the provided variable name and annotation.
+ *
+ * @param variableName The name of the variable for which the mock integer is generated.
+ * @param annotation An optional [MockInt] annotation to specify the mock integer properties.
+ * @return A mock integer value.
+ */
 fun createInt(variableName: String, annotation: MockInt? = null): Int {
 
     val type = annotation?.type ?: getIntType(variableName)
@@ -49,6 +56,13 @@ fun createInt(variableName: String, annotation: MockInt? = null): Int {
     }
 }
 
+/**
+ * Generates a mock float value based on the provided variable name and annotation.
+ *
+ * @param variableName The name of the variable for which the mock float is generated.
+ * @param annotation An optional [MockFloat] annotation to specify the mock float properties.
+ * @return A mock float value.
+ */
 fun createFloat(variableName: String, annotation: MockFloat? = null): Float {
 
     val type = annotation?.type ?: getFloatType(variableName)
@@ -83,6 +97,13 @@ fun createFloat(variableName: String, annotation: MockFloat? = null): Float {
     }
 }
 
+/**
+ * Generates a mock long value based on the provided variable name and annotation.
+ *
+ * @param variableName The name of the variable for which the mock long is generated.
+ * @param annotation An optional [MockLong] annotation to specify the mock long properties.
+ * @return A mock long value.
+ */
 fun createLong(variableName: String, annotation: MockLong? = null): Long {
     val type = annotation?.type ?: getLongType(variableName)
 
@@ -105,7 +126,16 @@ fun createDouble(): Double {
     return Random.nextDouble()
 }
 
-// TODO change getIdentifier
+/**
+ * Generates a mock string value based on the provided variable name, context, and annotation.
+ *
+ * @param variableName The name of the variable for which the mock string is generated.
+ * @param context The context from which to obtain resources.
+ * @param annotation An optional [MockString] annotation to specify the mock string properties.
+ * @return A mock string value.
+ * @throws IllegalArgumentException if the string array for the specified type is empty.
+ */
+
 fun createString(variableName: String, context: Context, annotation: MockString? = null): String {
     val type = annotation?.type ?: getStringType(variableName)
     val wordCount = annotation?.wordCount
