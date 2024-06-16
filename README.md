@@ -3,9 +3,9 @@
 ![image](https://github.com/saeid-injast/Mocha/assets/66521658/2788f7fd-f6f5-4746-a451-0c582dc6769f)
 
 [![Build](https://github.com/saeid-yousefi/Mocha/actions/workflows/build.yml/badge.svg)](https://github.com/saeid-yousefi/Mocha/actions/workflows/build.yml)
-[![Build and Publish Documentation](https://github.com/saeid-yousefi/Mocha/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/saeid-yousefi/Mocha/actions/workflows/deploy-docs.yml)
+[![Build Tests](https://github.com/saeid-yousefi/Mocha/actions/workflows/build-tests.yml/badge.svg)](https://github.com/saeid-yousefi/Mocha/actions/workflows/build-tests.yml)
+[![Publish Documentation](https://github.com/saeid-yousefi/Mocha/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/saeid-yousefi/Mocha/actions/workflows/deploy-docs.yml)
 [![Measure Test coverage](https://github.com/saeid-yousefi/Mocha/actions/workflows/run-tests.yml/badge.svg)](https://github.com/saeid-yousefi/Mocha/actions/workflows/run-tests.yml)
-
 
 Read Full Documentation [Here](https://saeid-yousefi.github.io/Mocha/)
 
