@@ -28,6 +28,9 @@ jobs:
       - name: Generate documentation
         run: ./gradlew dokkaHtml
 
+      - name: ls
+        run: ls -R mocha/build/dokka/html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
