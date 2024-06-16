@@ -21,16 +21,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-          cache: gradle
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Generate documentation
         run: ./gradlew dokkaHtml
-
-      - name: ls
-        run: ls mocha/build/dokka/html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
