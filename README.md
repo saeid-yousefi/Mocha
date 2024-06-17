@@ -1,6 +1,6 @@
 # Mocha
 
-![image](https://github.com/saeid-injast/Mocha/assets/66521658/2788f7fd-f6f5-4746-a451-0c582dc6769f)
+![mocha](https://github.com/saeid-yousefi/Mocha/assets/66521658/2a92f925-9a27-46ac-aa31-5cdccd22ff72)
 
 [![Build](https://github.com/saeid-yousefi/Mocha/actions/workflows/build.yml/badge.svg)](https://github.com/saeid-yousefi/Mocha/actions/workflows/build.yml)
 [![Build Tests](https://github.com/saeid-yousefi/Mocha/actions/workflows/build-tests.yml/badge.svg)](https://github.com/saeid-yousefi/Mocha/actions/workflows/build-tests.yml)
