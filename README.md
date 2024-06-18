@@ -35,7 +35,7 @@ allprojects {
 ## Add the dependency to your build.gradle (Module level):
 
 ```dependencies {
-    implementation 'com.github.yourusername:mocha:1.0.0'
+    implementation 'com.github.saeid-yousefi:Mocha:[latest_release_version]'
 }
 ```
 
