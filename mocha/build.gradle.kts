@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.kover)
     alias(libs.plugins.dokka)
+    id("maven-publish")
 }
 
 android {
@@ -38,6 +39,13 @@ android {
             isIncludeAndroidResources = true
         }
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
@@ -53,4 +61,18 @@ dependencies {
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+
+publishing {
+    publications {
+        create("release", MavenPublication::class) {
+            groupId = "com.github.saeid-yousefi"
+            artifactId = "Mocha"
+            version = "1.0.0-alpha"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
