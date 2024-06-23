@@ -5,7 +5,8 @@ import ir.sy.mocha.mocker.annotations.MockString
 import ir.sy.mocha.mocker.types.LongType
 
 data class User(
-    val id: Int,
+    val id: List<Int>,
+    val price: Int,
     val name: String,
     val username: String,
     val email: String,

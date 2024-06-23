@@ -22,8 +22,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import ir.sy.mocha.core.mock
-import ir.sy.mocka_runner.models.User
 import ir.sy.mocka_runner.ui.theme.MockaTheme
+import kotlin.reflect.KClass
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +39,11 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     MainView(mockedModel) {
-                        mockedModel = mock(context = context, type = User::class).toString()
+                        mockedModel =
+                            mock(
+                                context = context,
+                                clazz = List::class as KClass<*>
+                            ).toString()
                     }
                 }
             }

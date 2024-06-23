@@ -11,6 +11,7 @@ import ir.sy.mocha.mocker.isDouble
 import ir.sy.mocha.mocker.isFloat
 import ir.sy.mocha.mocker.isInt
 import ir.sy.mocha.mocker.isList
+import ir.sy.mocha.mocker.isListOrIterable
 import ir.sy.mocha.mocker.isLong
 import ir.sy.mocha.mocker.isString
 import ir.sy.mocha.mocker.types.FloatType
@@ -70,9 +71,9 @@ fun createData(
 
         type?.isDouble() == true -> createDouble()
 
-        type?.isList() == true -> List(2) {
+        type?.jvmErasure.isListOrIterable() -> List(2) {
             createData(
-                type = type.arguments.first().type,
+                type = type?.arguments?.first()?.type,
                 context = context
             )
         }
