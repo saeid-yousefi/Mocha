@@ -4,7 +4,6 @@ import android.content.Context
 import ir.sy.mocha.mocker.data_creators.createData
 import ir.sy.mocha.utils.Constants
 import kotlin.reflect.KClass
-import kotlin.reflect.KFunction
 import kotlin.reflect.full.createType
 
 class PrimitiveMockStrategy<T>(private val clazz: KClass<*>? = null) : MockStrategy<T> {

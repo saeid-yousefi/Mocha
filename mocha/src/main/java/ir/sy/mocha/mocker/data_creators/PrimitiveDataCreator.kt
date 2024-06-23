@@ -10,7 +10,6 @@ import ir.sy.mocha.mocker.isBoolean
 import ir.sy.mocha.mocker.isDouble
 import ir.sy.mocha.mocker.isFloat
 import ir.sy.mocha.mocker.isInt
-import ir.sy.mocha.mocker.isList
 import ir.sy.mocha.mocker.isListOrIterable
 import ir.sy.mocha.mocker.isLong
 import ir.sy.mocha.mocker.isString
@@ -26,7 +25,6 @@ import ir.sy.mocha.utils.Constants.MAXIMUM_TIME_IN_MILLI_SECONDS
 import ir.sy.mocha.utils.Constants.MINIMUM_TIME_IN_MILLI_SECONDS
 import kotlin.random.Random
 import kotlin.reflect.KType
-import kotlin.reflect.full.createType
 import kotlin.reflect.jvm.jvmErasure
 
 

@@ -1,7 +1,6 @@
 package ir.sy.mocha.core.strategy
 
 import android.content.Context
-import android.util.Log
 import ir.sy.mocha.mocker.data_creators.createData
 import ir.sy.mocha.utils.Constants
 import kotlin.reflect.KClass
