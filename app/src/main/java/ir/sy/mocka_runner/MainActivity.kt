@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import ir.sy.mocha.core.mock
+import ir.sy.mocha.resources.Languages
 import ir.sy.mocka_runner.models.User
 import ir.sy.mocka_runner.ui.theme.MockaTheme
 
@@ -40,7 +41,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     MainView(mockedModel) {
                         val data = List(2) {
-                            mock(context = context, clazz = User::class)
+                            mock(language = Languages.Persian, clazz = User::class)
                         }
                         mockedModel = data.toString()
                     }

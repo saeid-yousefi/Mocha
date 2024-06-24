@@ -1,7 +1,7 @@
 package ir.sy.mocha.core.strategy
 
-import android.content.Context
+import ir.sy.mocha.resources.Languages
 
 interface MockStrategy<T> {
-    fun mock(context: Context): T
+    fun mock(language: Languages): T
 }
