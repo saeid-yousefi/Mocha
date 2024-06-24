@@ -14,8 +14,8 @@ import ir.sy.mocha.mocker.types.IntType
  * @property max The maximum value of the integer. Default is [Int.MAX_VALUE].
  * @property factor A factor to apply to the generated integer value. Default is 1.
  */
-@Target(AnnotationTarget.VALUE_PARAMETER)
-@Retention(AnnotationRetention.RUNTIME)
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.EXPRESSION)
+@Retention(AnnotationRetention.SOURCE)
 annotation class MockInt(
     val type: IntType,
     val min: Int = 1,

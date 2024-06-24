@@ -7,6 +7,7 @@ import io.kotest.matchers.types.shouldBeInstanceOf
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkStatic
+import ir.sy.mocha.core.Mocha
 import ir.sy.mocha.mocker.data_creators.createInt
 import ir.sy.mocha.mocker.data_creators.createString
 import kotlin.reflect.full.createType

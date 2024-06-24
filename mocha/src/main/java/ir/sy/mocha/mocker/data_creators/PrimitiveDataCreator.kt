@@ -1,11 +1,18 @@
 package ir.sy.mocha.mocker.data_creators
 
 import android.content.Context
-import android.content.res.Resources
+import ir.sy.mocha.core.mock
 import ir.sy.mocha.mocker.annotations.MockFloat
 import ir.sy.mocha.mocker.annotations.MockInt
 import ir.sy.mocha.mocker.annotations.MockLong
 import ir.sy.mocha.mocker.annotations.MockString
+import ir.sy.mocha.mocker.isBoolean
+import ir.sy.mocha.mocker.isDouble
+import ir.sy.mocha.mocker.isFloat
+import ir.sy.mocha.mocker.isInt
+import ir.sy.mocha.mocker.isListOrIterable
+import ir.sy.mocha.mocker.isLong
+import ir.sy.mocha.mocker.isString
 import ir.sy.mocha.mocker.types.FloatType
 import ir.sy.mocha.mocker.types.IntType
 import ir.sy.mocha.mocker.types.LongType
@@ -17,6 +24,61 @@ import ir.sy.mocha.utils.Constants
 import ir.sy.mocha.utils.Constants.MAXIMUM_TIME_IN_MILLI_SECONDS
 import ir.sy.mocha.utils.Constants.MINIMUM_TIME_IN_MILLI_SECONDS
 import kotlin.random.Random
+import kotlin.reflect.KType
+import kotlin.reflect.jvm.jvmErasure
+
+
+/**
+ * Creates data for the specified type.
+ *
+ * @param type The type of the data to create.
+ * @param variableName The name of the variable.
+ * @param annotation The annotation associated with the variable.
+ * @return An instance of the created data.
+ */
+fun createData(
+    type: KType? = null,
+    variableName: String? = null,
+    annotation: Annotation? = null,
+    context: Context
+): Any? {
+    return when {
+        type?.isInt() == true ->
+            createInt(
+                variableName.toString(),
+                if (annotation == null) null else annotation as MockInt
+            )
+
+        type?.isString() == true -> createString(
+            variableName = variableName.toString(),
+            context = context,
+            annotation = if (annotation == null) null else annotation as MockString
+        )
+
+        type?.isFloat() == true -> createFloat(
+            variableName = variableName.toString(),
+            annotation = if (annotation == null) null else annotation as MockFloat
+        )
+
+        type?.isLong() == true -> createLong(
+            variableName = variableName.toString(),
+            annotation = if (annotation == null) null else annotation as MockLong
+        )
+
+        type?.isBoolean() == true -> createBoolean()
+
+        type?.isDouble() == true -> createDouble()
+
+        type?.jvmErasure.isListOrIterable() -> List(2) {
+            createData(
+                type = type?.arguments?.first()?.type,
+                context = context
+            )
+        }
+
+        else -> type?.jvmErasure?.let { mock(it, context) }
+    }
+}
 
 /**
  * Generates a mock integer value based on the provided variable name and annotation.

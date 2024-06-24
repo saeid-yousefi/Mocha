@@ -21,7 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import ir.sy.mocha.Mocha
+import ir.sy.mocha.core.mock
 import ir.sy.mocka_runner.models.User
 import ir.sy.mocka_runner.ui.theme.MockaTheme
 
@@ -39,7 +39,10 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     MainView(mockedModel) {
-                        mockedModel = Mocha(context).mock<User>().toString()
+                        val data = List(2) {
+                            mock(context = context, clazz = User::class)
+                        }
+                        mockedModel = data.toString()
                     }
                 }
             }
