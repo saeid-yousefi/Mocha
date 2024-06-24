@@ -33,7 +33,6 @@ class MainActivity : ComponentActivity() {
             var mockedModel by remember {
                 mutableStateOf<String?>(null)
             }
-            val context = LocalContext.current
             MockaTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),

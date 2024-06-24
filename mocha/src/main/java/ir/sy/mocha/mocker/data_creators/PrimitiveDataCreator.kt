@@ -211,14 +211,13 @@ fun createString(
     val type = annotation?.type ?: getStringType(variableName)
     val wordCount = annotation?.wordCount
     val defaultValue = annotation?.defaultValue
-    val resources = getResourcesByLanguage(language)
     if (!defaultValue.isNullOrBlank()) return defaultValue
 
 
     val stringArray =
-        resources::class.memberProperties.firstOrNull { it.name == type.name.lowercase() }?.getter?.call(
-            resources
-        ) as List<String>
+        language.resources::class.memberProperties
+            .firstOrNull { it.name == type.name.lowercase() }
+            ?.getter?.call(language.resources) as List<String>
 
 
     val randomIndex = Random.nextInt(stringArray.size)
