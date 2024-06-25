@@ -1,6 +1,5 @@
 package ir.sy.mocha.mocker.data_creators
 
-import android.content.Context
 import ir.sy.mocha.core.mock
 import ir.sy.mocha.mocker.annotations.MockFloat
 import ir.sy.mocha.mocker.annotations.MockInt
@@ -45,7 +44,7 @@ fun createData(
     type: KType? = null,
     variableName: String? = null,
     annotation: Annotation? = null,
-    language: Languages
+    language: Languages = Languages.English
 ): Any? {
     return when {
         type?.isInt() == true ->
