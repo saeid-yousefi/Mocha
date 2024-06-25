@@ -241,13 +241,6 @@ fun createBoolean(): Boolean {
     return Random.nextBoolean()
 }
 
-internal fun getStringArrayFromResources(context: Context, arrayName: String): Array<String> {
-    val resourceId =
-        context.resources.getIdentifier(arrayName, "array", context.packageName)
-
-    return context.resources.getStringArray(resourceId)
-}
-
 private fun createIntNumber(range: IntRange, factor: Int): Int {
     return Random.nextInt(range.first, range.last) * factor
 }
