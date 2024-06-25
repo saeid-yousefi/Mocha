@@ -1,6 +1,5 @@
 package ir.sy.mocha.mocker.data_creators
 
-import android.content.Context
 import ir.sy.mocha.core.mock
 import ir.sy.mocha.mocker.annotations.MockFloat
 import ir.sy.mocha.mocker.annotations.MockInt
@@ -45,7 +44,7 @@ fun createData(
     type: KType? = null,
     variableName: String? = null,
     annotation: Annotation? = null,
-    language: Languages
+    language: Languages = Languages.English
 ): Any? {
     return when {
         type?.isInt() == true ->
@@ -239,13 +238,6 @@ private fun getResourcesByLanguage(language: Languages): MochaResources {
 
 fun createBoolean(): Boolean {
     return Random.nextBoolean()
-}
-
-internal fun getStringArrayFromResources(context: Context, arrayName: String): Array<String> {
-    val resourceId =
-        context.resources.getIdentifier(arrayName, "array", context.packageName)
-
-    return context.resources.getStringArray(resourceId)
 }
 
 private fun createIntNumber(range: IntRange, factor: Int): Int {
