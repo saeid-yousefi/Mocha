@@ -1,4 +1,4 @@
-package ir.sy.mocha
+package ir.sy.mocha.data_creators
 
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe

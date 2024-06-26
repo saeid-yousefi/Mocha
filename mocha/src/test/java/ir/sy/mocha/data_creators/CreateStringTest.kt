@@ -16,21 +16,21 @@ class CreateStringTest : BehaviorSpec({
             val variableName = "firstname"
             val result = createString(variableName, language)
             then("result should be name") {
-                result shouldBeIn EnglishResources.name
+                result shouldBeIn Languages.English.resources.name
             }
         }
         `when`("create data for Country") {
             val variableName = "user_nationality"
             val result = createString(variableName, language)
             then("result should be in countries") {
-                result shouldBeIn EnglishResources.country
+                result shouldBeIn Languages.English.resources.country
             }
         }
         `when`("create data for undefined variable") {
             val variableName = "aa_bb_cc"
             val result = createString(variableName, language)
             then("result should be in countries") {
-                result shouldBeIn EnglishResources.undefined
+                result shouldBeIn Languages.English.resources.undefined
             }
         }
     }
@@ -46,8 +46,15 @@ class CreateStringTest : BehaviorSpec({
         `when`("custom annotation with word count") {
             val annotation = MockString(type = StringType.Custom, wordCount = 1)
             val result = createString(variableName, language, annotation)
-            then("result should be The") {
+            then("result size should be 1") {
                 result.split(" ").size shouldBe 1
+            }
+        }
+        `when`("name annotation with persian language") {
+            val annotation = MockString(type = StringType.Name)
+            val result = createString(variableName, Languages.Persian, annotation)
+            then("result should be name in persian") {
+                result shouldBeIn Languages.Persian.resources.name
             }
         }
     }
