@@ -64,7 +64,7 @@ publishing {
         create("release", MavenPublication::class) {
             groupId = "com.github.saeid-yousefi"
             artifactId = "Mocha"
-            version = "1.0.0-alpha1"
+            version = "1.0.0-alpha2"
 
             afterEvaluate {
                 from(components["release"])
