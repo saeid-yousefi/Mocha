@@ -2,17 +2,18 @@ package ir.sy.mocha.core.strategy
 
 import android.content.Context
 import ir.sy.mocha.mocker.data_creators.createData
+import ir.sy.mocha.resources.Languages
 import ir.sy.mocha.utils.Constants
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createType
 
 class PrimitiveMockStrategy<T>(private val clazz: KClass<*>? = null) : MockStrategy<T> {
     @Suppress("UNCHECKED_CAST")
-    override fun mock(context: Context): T {
+    override fun mock(language: Languages): T {
         return createData(
             annotation = findMochaAnnotations(clazz?.annotations.orEmpty()),
-            type = clazz?.createType(),
-            context = context
+            language = language,
+            type = clazz?.createType()
         ) as T
     }
 

@@ -1,6 +1,5 @@
 package ir.sy.mocha.mocker.data_creators
 
-import android.content.Context
 import ir.sy.mocha.core.mock
 import ir.sy.mocha.mocker.annotations.MockFloat
 import ir.sy.mocha.mocker.annotations.MockInt
@@ -20,11 +19,16 @@ import ir.sy.mocha.mocker.types.getFloatType
 import ir.sy.mocha.mocker.types.getIntType
 import ir.sy.mocha.mocker.types.getLongType
 import ir.sy.mocha.mocker.types.getStringType
+import ir.sy.mocha.resources.EnglishResources
+import ir.sy.mocha.resources.Languages
+import ir.sy.mocha.resources.MochaResources
+import ir.sy.mocha.resources.PersianResources
 import ir.sy.mocha.utils.Constants
 import ir.sy.mocha.utils.Constants.MAXIMUM_TIME_IN_MILLI_SECONDS
 import ir.sy.mocha.utils.Constants.MINIMUM_TIME_IN_MILLI_SECONDS
 import kotlin.random.Random
 import kotlin.reflect.KType
+import kotlin.reflect.full.memberProperties
 import kotlin.reflect.jvm.jvmErasure
 
 
@@ -40,7 +44,7 @@ fun createData(
     type: KType? = null,
     variableName: String? = null,
     annotation: Annotation? = null,
-    context: Context
+    language: Languages = Languages.English
 ): Any? {
     return when {
         type?.isInt() == true ->
@@ -51,7 +55,7 @@ fun createData(
 
         type?.isString() == true -> createString(
             variableName = variableName.toString(),
-            context = context,
+            language = language,
             annotation = if (annotation == null) null else annotation as MockString
         )
 
@@ -72,11 +76,11 @@ fun createData(
         type?.jvmErasure.isListOrIterable() -> List(2) {
             createData(
                 type = type?.arguments?.first()?.type,
-                context = context
+                language = language,
             )
         }
 
-        else -> type?.jvmErasure?.let { mock(it, context) }
+        else -> type?.jvmErasure?.let { mock(it, language) }
     }
 }
 
@@ -198,16 +202,22 @@ fun createDouble(): Double {
  * @throws IllegalArgumentException if the string array for the specified type is empty.
  */
 
-fun createString(variableName: String, context: Context, annotation: MockString? = null): String {
+fun createString(
+    variableName: String,
+    language: Languages,
+    annotation: MockString? = null
+): String {
     val type = annotation?.type ?: getStringType(variableName)
     val wordCount = annotation?.wordCount
     val defaultValue = annotation?.defaultValue
     if (!defaultValue.isNullOrBlank()) return defaultValue
 
-    val stringArray = getStringArrayFromResources(context, "mocha_${type.name.lowercase()}")
-    if (stringArray.isEmpty()) {
-        throw IllegalArgumentException("String array for type: ${type.name.lowercase()} is empty")
-    }
+
+    val stringArray =
+        language.resources::class.memberProperties
+            .firstOrNull { it.name == type.name.lowercase() }
+            ?.getter?.call(language.resources) as List<String>
+
 
     val randomIndex = Random.nextInt(stringArray.size)
     val selectedString = stringArray[randomIndex]
@@ -219,15 +229,15 @@ fun createString(variableName: String, context: Context, annotation: MockString?
     }
 }
 
-fun createBoolean(): Boolean {
-    return Random.nextBoolean()
+private fun getResourcesByLanguage(language: Languages): MochaResources {
+    return when (language) {
+        Languages.English -> EnglishResources
+        Languages.Persian -> PersianResources
+    }
 }
 
-internal fun getStringArrayFromResources(context: Context, arrayName: String): Array<String> {
-    val resourceId =
-        context.resources.getIdentifier(arrayName, "array", context.packageName)
-
-    return context.resources.getStringArray(resourceId)
+fun createBoolean(): Boolean {
+    return Random.nextBoolean()
 }
 
 private fun createIntNumber(range: IntRange, factor: Int): Int {
