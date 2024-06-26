@@ -19,7 +19,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import ir.sy.mocha.core.mock
 import ir.sy.mocha.resources.Languages
@@ -39,10 +38,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     MainView(mockedModel) {
-                        val data = List(2) {
-                            mock(language = Languages.Persian, clazz = User::class)
-                        }
-                        mockedModel = data.toString()
+                        mockedModel =
+                            mock(language = Languages.English, clazz = User::class).toString()
+                                .replace(",", "\n")
                     }
                 }
             }
