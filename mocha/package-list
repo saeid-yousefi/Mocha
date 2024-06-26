@@ -1,5 +1,16 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
+$dokka.location:ir.sy.mocha.core.strategy////PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/index.html
+$dokka.location:ir.sy.mocha.core.strategy/ConstructorMockStrategy///PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/-constructor-mock-strategy/index.html
+$dokka.location:ir.sy.mocha.core.strategy/ConstructorMockStrategy/ConstructorMockStrategy/#kotlin.reflect.KClass[*]?/PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/-constructor-mock-strategy/-constructor-mock-strategy.html
+$dokka.location:ir.sy.mocha.core.strategy/ConstructorMockStrategy/mock/#ir.sy.mocha.resources.Languages/PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/-constructor-mock-strategy/mock.html
+$dokka.location:ir.sy.mocha.core.strategy/MockStrategy///PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/-mock-strategy/index.html
+$dokka.location:ir.sy.mocha.core.strategy/MockStrategy/mock/#ir.sy.mocha.resources.Languages/PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/-mock-strategy/mock.html
+$dokka.location:ir.sy.mocha.core.strategy/PrimitiveMockStrategy///PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/-primitive-mock-strategy/index.html
+$dokka.location:ir.sy.mocha.core.strategy/PrimitiveMockStrategy/PrimitiveMockStrategy/#kotlin.reflect.KClass[*]?/PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/-primitive-mock-strategy/-primitive-mock-strategy.html
+$dokka.location:ir.sy.mocha.core.strategy/PrimitiveMockStrategy/mock/#ir.sy.mocha.resources.Languages/PointingToDeclaration/mocha/ir.sy.mocha.core.strategy/-primitive-mock-strategy/mock.html
+$dokka.location:ir.sy.mocha.core////PointingToDeclaration/mocha/ir.sy.mocha.core/index.html
+$dokka.location:ir.sy.mocha.core//mock/#kotlin.reflect.KClass[TypeParam(bounds=[kotlin.Any])]#ir.sy.mocha.resources.Languages/PointingToDeclaration/mocha/ir.sy.mocha.core/mock.html
 $dokka.location:ir.sy.mocha.mocker.annotations////PointingToDeclaration/mocha/ir.sy.mocha.mocker.annotations/index.html
 $dokka.location:ir.sy.mocha.mocker.annotations/MockFloat///PointingToDeclaration/mocha/ir.sy.mocha.mocker.annotations/-mock-float/index.html
 $dokka.location:ir.sy.mocha.mocker.annotations/MockFloat/factor/#/PointingToDeclaration/mocha/ir.sy.mocha.mocker.annotations/-mock-float/factor.html
@@ -22,12 +33,13 @@ $dokka.location:ir.sy.mocha.mocker.annotations/MockString/type/#/PointingToDecla
 $dokka.location:ir.sy.mocha.mocker.annotations/MockString/wordCount/#/PointingToDeclaration/mocha/ir.sy.mocha.mocker.annotations/-mock-string/word-count.html
 $dokka.location:ir.sy.mocha.mocker.data_creators////PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/index.html
 $dokka.location:ir.sy.mocha.mocker.data_creators//createBoolean/#/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-boolean.html
+$dokka.location:ir.sy.mocha.mocker.data_creators//createData/#kotlin.reflect.KType?#kotlin.String?#kotlin.Annotation?#ir.sy.mocha.resources.Languages/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-data.html
 $dokka.location:ir.sy.mocha.mocker.data_creators//createDouble/#/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-double.html
 $dokka.location:ir.sy.mocha.mocker.data_creators//createFloat/#kotlin.String#ir.sy.mocha.mocker.annotations.MockFloat?/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-float.html
 $dokka.location:ir.sy.mocha.mocker.data_creators//createFloatNumber/#kotlin.ranges.ClosedFloatingPointRange[kotlin.Float]#kotlin.Int/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-float-number.html
 $dokka.location:ir.sy.mocha.mocker.data_creators//createInt/#kotlin.String#ir.sy.mocha.mocker.annotations.MockInt?/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-int.html
 $dokka.location:ir.sy.mocha.mocker.data_creators//createLong/#kotlin.String#ir.sy.mocha.mocker.annotations.MockLong?/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-long.html
-$dokka.location:ir.sy.mocha.mocker.data_creators//createString/#kotlin.String#android.content.Context#ir.sy.mocha.mocker.annotations.MockString?/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-string.html
+$dokka.location:ir.sy.mocha.mocker.data_creators//createString/#kotlin.String#ir.sy.mocha.resources.Languages#ir.sy.mocha.mocker.annotations.MockString?/PointingToDeclaration/mocha/ir.sy.mocha.mocker.data_creators/create-string.html
 $dokka.location:ir.sy.mocha.mocker.types////PointingToDeclaration/mocha/ir.sy.mocha.mocker.types/index.html
 $dokka.location:ir.sy.mocha.mocker.types//getFloatType/#kotlin.String/PointingToDeclaration/mocha/ir.sy.mocha.mocker.types/get-float-type.html
 $dokka.location:ir.sy.mocha.mocker.types//getIntType/#kotlin.String/PointingToDeclaration/mocha/ir.sy.mocha.mocker.types/get-int-type.html
@@ -120,20 +132,78 @@ $dokka.location:ir.sy.mocha.mocker//isBoolean/kotlin.reflect.KType#/PointingToDe
 $dokka.location:ir.sy.mocha.mocker//isDouble/kotlin.reflect.KType#/PointingToDeclaration/mocha/ir.sy.mocha.mocker/is-double.html
 $dokka.location:ir.sy.mocha.mocker//isFloat/kotlin.reflect.KType#/PointingToDeclaration/mocha/ir.sy.mocha.mocker/is-float.html
 $dokka.location:ir.sy.mocha.mocker//isInt/kotlin.reflect.KType#/PointingToDeclaration/mocha/ir.sy.mocha.mocker/is-int.html
-$dokka.location:ir.sy.mocha.mocker//isList/kotlin.reflect.KType#/PointingToDeclaration/mocha/ir.sy.mocha.mocker/is-list.html
+$dokka.location:ir.sy.mocha.mocker//isListOrIterable/kotlin.reflect.KClass[*]?#/PointingToDeclaration/mocha/ir.sy.mocha.mocker/is-list-or-iterable.html
 $dokka.location:ir.sy.mocha.mocker//isLong/kotlin.reflect.KType#/PointingToDeclaration/mocha/ir.sy.mocha.mocker/is-long.html
 $dokka.location:ir.sy.mocha.mocker//isString/kotlin.reflect.KType#/PointingToDeclaration/mocha/ir.sy.mocha.mocker/is-string.html
-$dokka.location:ir.sy.mocha.mocker//typeIs/kotlin.reflect.KParameter#kotlin.reflect.KType/PointingToDeclaration/mocha/ir.sy.mocha.mocker/type-is.html
-$dokka.location:ir.sy.mocha////PointingToDeclaration/mocha/ir.sy.mocha/index.html
-$dokka.location:ir.sy.mocha/Mocha///PointingToDeclaration/mocha/ir.sy.mocha/-mocha/index.html
-$dokka.location:ir.sy.mocha/Mocha/Mocha/#android.content.Context/PointingToDeclaration/mocha/ir.sy.mocha/-mocha/-mocha.html
-$dokka.location:ir.sy.mocha/Mocha/createData/#kotlin.reflect.KType?#kotlin.String?#kotlin.Annotation?/PointingToDeclaration/mocha/ir.sy.mocha/-mocha/create-data.html
-$dokka.location:ir.sy.mocha/Mocha/findMochaAnnotations/#kotlin.collections.List[kotlin.Annotation]/PointingToDeclaration/mocha/ir.sy.mocha/-mocha/find-mocha-annotations.html
-$dokka.location:ir.sy.mocha/Mocha/getConstructor/#kotlin.reflect.KClass[*]?/PointingToDeclaration/mocha/ir.sy.mocha/-mocha/get-constructor.html
-$dokka.location:ir.sy.mocha/Mocha/mock/#kotlin.reflect.KClass[*]?/PointingToDeclaration/mocha/ir.sy.mocha/-mocha/mock.html
-ir.sy.mocha
+$dokka.location:ir.sy.mocha.resources////PointingToDeclaration/mocha/ir.sy.mocha.resources/index.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources///PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/index.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/address/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/address.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/city/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/city.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/code/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/code.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/country/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/country.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/custom/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/custom.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/description/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/description.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/email/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/email.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/gender/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/gender.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/id/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/id.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/label/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/label.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/name/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/name.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/password/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/password.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/phone/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/phone.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/status/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/status.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/tag/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/tag.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/undefined/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/undefined.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/url/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/url.html
+$dokka.location:ir.sy.mocha.resources/EnglishResources/username/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-english-resources/username.html
+$dokka.location:ir.sy.mocha.resources/Languages.English///PointingToDeclaration/mocha/ir.sy.mocha.resources/-languages/-english/index.html
+$dokka.location:ir.sy.mocha.resources/Languages.English/resources/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-languages/-english/resources.html
+$dokka.location:ir.sy.mocha.resources/Languages.Persian///PointingToDeclaration/mocha/ir.sy.mocha.resources/-languages/-persian/index.html
+$dokka.location:ir.sy.mocha.resources/Languages.Persian/resources/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-languages/-persian/resources.html
+$dokka.location:ir.sy.mocha.resources/Languages///PointingToDeclaration/mocha/ir.sy.mocha.resources/-languages/index.html
+$dokka.location:ir.sy.mocha.resources/Languages/resources/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-languages/resources.html
+$dokka.location:ir.sy.mocha.resources/MochaResources///PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/index.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/address/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/address.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/city/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/city.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/code/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/code.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/country/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/country.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/custom/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/custom.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/description/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/description.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/email/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/email.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/gender/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/gender.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/id/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/id.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/label/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/label.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/name/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/name.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/password/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/password.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/phone/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/phone.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/status/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/status.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/tag/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/tag.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/undefined/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/undefined.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/url/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/url.html
+$dokka.location:ir.sy.mocha.resources/MochaResources/username/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-mocha-resources/username.html
+$dokka.location:ir.sy.mocha.resources/PersianResources///PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/index.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/address/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/address.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/city/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/city.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/code/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/code.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/country/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/country.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/custom/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/custom.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/description/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/description.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/email/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/email.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/gender/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/gender.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/id/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/id.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/label/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/label.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/name/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/name.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/password/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/password.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/phone/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/phone.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/status/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/status.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/tag/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/tag.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/undefined/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/undefined.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/url/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/url.html
+$dokka.location:ir.sy.mocha.resources/PersianResources/username/#/PointingToDeclaration/mocha/ir.sy.mocha.resources/-persian-resources/username.html
+ir.sy.mocha.core
+ir.sy.mocha.core.strategy
 ir.sy.mocha.mocker
 ir.sy.mocha.mocker.annotations
 ir.sy.mocha.mocker.data_creators
 ir.sy.mocha.mocker.types
+ir.sy.mocha.resources
 
