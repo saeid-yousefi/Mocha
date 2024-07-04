@@ -43,37 +43,27 @@ To use Mocha, simply annotate your data class fields with the provided annotatio
 
 ## Example Data Classes
 ```
-data class Foo(
-    val name: String,
+data class User(
     val id: Int,
-    val timestamp: Long,
-    @MockInt(type = IntType.Price, min = 1, max = 1000, factor = 2) val idk2: Int,
-    @MockString(defaultValue = "Hello world") val sth: String,
-    @MockString(type = StringType.Custom, wordCount = 3) val loremIpsum: String,
-    @MockLong(type = LongType.Custom, min = 1, max = 2_000_000_000L, factor = 2) val idk: Long,
-    @MockFloat(type = FloatType.Custom, min = 1.0, max = 100.0, factor = 1.5f) val randomFloat: Float,
-    val bar: List<Bar>
-)
-
-data class Bar(
-    val isOk: Boolean,
-    val city: String,
-    val phone: String,
+    val income: Int,
+    val name: String,
     val username: String,
-    val password: String
+    val email: String,
+    @MockLong(type = LongType.Timestamp) val ts: Long,
+    @MockString(defaultValue = "hello world") val string: String,
+    val address: Address
 )
 
 ```
 
 ## Generating Mock Data
 ```
-val model = Mocha(context).mock<Foo>().toString()
-println(model)
+ mockedModel = mock(language = Languages.English, clazz = User::class)
 ```
 
 ## Output
 ``` 
-Foo(name=John Doe, id=65189, timestamp=936702652365, idk2=1005000, sth=Hello world, loremIpsum=Actions speak louder, idk=889789120, randomFloat=75.32, bar=[Bar(isOk=false, city=Sydney, phone=+998877665544, username=markjohnson2020, password=test1234), Bar(isOk=true, city=Los Angeles, phone=+198765432109, username=johndoe123, password=password2020)])
+User(id=143,income=1200,name="John Wick", username="jw2024",email="jw2024@hotmail.com",ts=1720087364437,string="hello world",address=(city="Otava"))
 ```
 
 ## Annotations
